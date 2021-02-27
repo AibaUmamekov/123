@@ -1,37 +1,41 @@
 # MiniShop
 
 
-First clone from repository to your local folder using command
-    git clone https://github.com/AibaUmamekov/MiniShop.git 
 
-create virtual environment using command
-    python3 -m venv <name of your environment>
+    First clone from reposotory to your local folder using command
+        git clone https://github.com/AibaUmamekov/MiniShop.git .
 
-activate your virtual environment
-    source <name of your environment>/bin/activate
+    create virtual environment using command
+        python3 -m venv <name of your environment>
 
-install requirements by commond
-    pip3 install -r requirements.txt
+    activate your virtual environment
+        source <name of your environment>/bin/activate
 
-create on near manage.py file .env, same as .env_example
-    generate secret key to put in to .env file
+    install requirements by commond
+        pip3 install -r requirements.txt
 
-create database on postgresql using commands
-    sudo su - postgres
-    psql
-    CREATE DATABASE <db_name>;
-    CREATE USER <db_user> WITH PASSWORD <'db_password'>;
-    ALTER ROLE root SET client_encoding TO 'utf8';
-    ALTER ROLE root SET default_transaction_isolation TO 'read committed';
-    ALTER ROLE root SET timezone TO 'UTC';
-    GRANT ALL PRIVILEGES ON DATABASE <db_name> TO <db_user>;
+    create on near manage.py file .env, same as .env_example
+        generate secret key to put in to .env file
 
-make migrations
-    python manage.py makemigrations
-    python manage.py migrate
+    create database on postgresql using commands
+        sudo su - postgres
+        psql
+        CREATE DATABASE <db_name>;
+        CREATE USER <db_user> WITH PASSWORD <'db_password'>;
+        ALTER ROLE root SET client_encoding TO 'utf8';
+        ALTER ROLE root SET default_transaction_isolation TO 'read committed';
+        ALTER ROLE root SET timezone TO 'UTC';
+        GRANT ALL PRIVILEGES ON DATABASE <db_name> TO <db_user>;
 
-create superuser
-    python manage.py createsuperuser
+    make migrations
+        python manage.py makemigrations
+        python manage.py migrate
 
-finally you can run your project
-    python manage.py runserver
+    create superuser
+        python manage.py createsuperuser
+
+    finally you can run your project
+        python manage.py runserver
+
+
+                
